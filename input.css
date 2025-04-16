@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@theme {
+  --color-first-color: #f1efe9;  /* Main background */
+  --color-second-color: #beceb0; /* Cards, testimonials background */
+  --color-third-color: #34857f;  /* Headings, buttons */
+  --color-fourth-color: #b0a48a; /* Hover effects, accents */
+}

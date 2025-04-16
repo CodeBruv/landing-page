@@ -1,0 +1,36 @@
+/* Animations */
+.animate-fadeIn {
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+section {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+section:nth-child(1) { animation-delay: 0s; } /* Hero */
+section:nth-child(2) { animation-delay: 0.2s; } /* Products */
+section:nth-child(3) { animation-delay: 0.4s; } /* Why Choose Us */
+section:nth-child(4) { animation-delay: 0.6s; } /* Testimonials */
+section:nth-child(5) { animation-delay: 0.8s; } /* Carousel */
+section:nth-child(6) { animation-delay: 1.0s; } /* Newsletter */
+footer { animation-delay: 1.2s; }
+
+/* Parallax Effect */
+#hero {
+  background-attachment: fixed;
+}
+
+/* Carousel */
+.carousel-item { display: none; }
+.carousel-item.active { display: block; }
