@@ -34,3 +34,4 @@ footer { animation-delay: 1.2s; }
 /* Carousel */
 .carousel-item { display: none; }
 .carousel-item.active { display: block; }
+

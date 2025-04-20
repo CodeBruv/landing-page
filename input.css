@@ -10,3 +10,10 @@
   --color-third-color: #34857f;  /* Headings, buttons */
   --color-fourth-color: #b0a48a; /* Hover effects, accents */
 }
+
+@layer components {
+  .show {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+}

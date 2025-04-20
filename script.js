@@ -54,5 +54,32 @@ newsletterForm.addEventListener('submit', (e) => {
   }
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopButton = document.getElementById('back-to-top');
+  console.log('Back to Top Button:', backToTopButton); // Should log the button element
+  if (!backToTopButton) {
+    console.error('Button not found!');
+    return;
+  }
+
+  window.addEventListener('scroll', () => {
+    console.log('Scroll position:', window.scrollY);
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 100) {
+      backToTopButton.classList.add('show');
+      console.log('Showing button');
+    } else {
+      backToTopButton.classList.remove('show');
+      console.log('Hiding button');
+    }
+  });
+
+  backToTopButton.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+});
+
 // Dynamic Copyright Year
 document.getElementById('copyright-year').textContent = new Date().getFullYear();
